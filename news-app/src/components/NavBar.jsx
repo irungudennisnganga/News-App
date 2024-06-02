@@ -1,4 +1,5 @@
 import  { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,9 +13,9 @@ export const Navbar = () => {
 
   return (
     <nav className="flex justify-between items-center bg-gray-900 text-white sticky top-0 p-4">
-      <a href="/" className="text-2xl font-bold">
+      <Link to="/" className="text-2xl font-bold">
         Home
-      </a>
+      </Link>
       <div
         className="menu md:hidden flex flex-col justify-between w-9 h-8 cursor-pointer"
         onClick={() => setMenuOpen(!menuOpen)}
@@ -30,12 +31,15 @@ export const Navbar = () => {
       >
         {section.map((data) => (
           <li key={data} className="list-none">
-            <a
-              href={`/${data}`}
+            <NavLink
+              to={`/${data}`}
               className="block text-white px-2 py-1 rounded-md mx-2"
+              activestyle={{
+                color: "blue", // Change this to the desired active color
+              }}
             >
               {data}
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>
