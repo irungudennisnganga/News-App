@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types'; 
 import useWindowSize from './UseWindowSize.jsx'; 
-import { CirclesWithBar } from 'react-loader-spinner';
+
 
 function News({ news = [] }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -45,16 +45,7 @@ function News({ news = [] }) {
         </div>
       ) : (
         <div className="flex justify-center items-center">
-          <CirclesWithBar
-            height="100"
-            width="100"
-            color="#4fa94d"
-            outerCircleColor="#4fa94d"
-            innerCircleColor="#4fa94d"
-            barColor="#4fa94d"
-            ariaLabel="circles-with-bar-loading"
-            visible={true}
-          />
+          <h2>Loading.....</h2>
         </div>
       )}
 
