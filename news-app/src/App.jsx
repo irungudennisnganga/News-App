@@ -21,7 +21,7 @@ function App() {
   }, [location.pathname]);
   
   return (
-    <>
+    <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -34,7 +34,7 @@ function App() {
         <Route path="/science" element={<News news={news} />} />
         <Route path="/health" element={<News news={news} />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
