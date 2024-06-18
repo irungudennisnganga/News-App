@@ -27,17 +27,17 @@ function News({ news = [] }) {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 text-justify">
       {currentItems.length > 0 ? (
         <div className={`grid ${width > 1024 ? 'grid-cols-3 gap-6' : 'grid-cols-1'}`}>
           {currentItems.map((item, index) => (
             <div key={index} className="mb-6">
-              <h3 className="text-xl font-bold mb-2 text-cyan-500">{item.title}</h3>
+              <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
               <a href={item.link}>
                 <img
                   src={item.og}
                   alt={item.title}
-                  className="w-full h-auto mb-2 rounded-md shadow-lg"
+                  className="w-96 h-auto mb-2 rounded-md shadow-lg"
                 />
               </a>
             </div>
@@ -58,7 +58,7 @@ function News({ news = [] }) {
           >
             Previous
           </button>
-          <span className="text-gray-700">Page {currentPage} of {totalPages}</span>
+          <span className="text-white">Page {currentPage} of {totalPages}</span>
           <button
             onClick={handleNextPage}
             disabled={currentPage === totalPages}

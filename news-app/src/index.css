@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.css-selector {
+    background: linear-gradient(270deg, #0fd2a0, #070707, #0d59d7, #c8bc12);
+    background-size: 800% 800%;
+}
