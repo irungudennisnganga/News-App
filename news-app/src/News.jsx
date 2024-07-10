@@ -27,11 +27,11 @@ function News({ news = [] }) {
   };
 
   return (
-    <div className="p-4 text-justify">
+    <div className="p-4 text-centre ">
       {currentItems.length > 0 ? (
         <div className={`grid ${width > 1024 ? 'grid-cols-3 gap-6' : 'grid-cols-1'}`}>
           {currentItems.map((item, index) => (
-            <div key={index} className="mb-6">
+            <div key={index} className="mb-6 rounded border-2 p-2 border-gray-50">
               <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
               <a href={item.link}>
                 <img
